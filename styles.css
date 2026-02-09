@@ -836,11 +836,14 @@ img {
     position: absolute;
     top: 72px;
     right: 5vw;
+    left: 5vw;
     background: var(--card);
     border: 1px solid var(--stroke);
     border-radius: 16px;
     padding: 1rem 1.2rem;
     gap: 0.8rem;
+    text-align: center;
+    z-index: 10;
   }
 }
 
@@ -866,5 +869,116 @@ img {
 
   .nav-cta {
     display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(1100px, 92vw);
+  }
+
+  .hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: auto;
+  }
+
+  .plate {
+    height: 280px;
+  }
+
+  .plate img {
+    transform: translateY(-28px);
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .menu-card {
+    padding: 1.2rem;
+  }
+
+  .menu-photo {
+    height: 130px;
+  }
+
+  .contact-grid,
+  .hours-grid,
+  .location-card {
+    gap: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-text span {
+    font-size: 1.15rem;
+  }
+
+  .brand-text small {
+    font-size: 0.7rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter {
+    gap: 0.5rem;
+  }
+
+  .filter button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .menu-card {
+    border-radius: 16px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hours-card,
+  .contact-card,
+  .contact-form,
+  .location-card {
+    border-radius: 16px;
+  }
+
+  .location-card {
+    padding: 1.8rem;
+  }
+
+  .map {
+    min-height: 180px;
   }
 }
